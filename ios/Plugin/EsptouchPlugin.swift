@@ -15,4 +15,13 @@ public class EsptouchPlugin: CAPPlugin {
             "value": implementation.echo(value)
         ])
     }
+
+    @objc func openMap(_ call: CAPPluginCall) {
+        let latitude = call.getString("latitude")
+        let longitude = call.getNumber("longitude")
+
+        // more logic
+
+        call.resolve()
+    }
 }
